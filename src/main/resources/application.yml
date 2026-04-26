@@ -1,1 +1,18 @@
-spring.application.name=recipeResolver
+spring:
+  application:
+    name: recipeResolver
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/recipe_resolver?useSSL=false&allowPublicKeyRetrieval=true&characterEncoding=UTF-8
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: false
